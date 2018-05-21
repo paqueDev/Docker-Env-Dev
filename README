@@ -1,0 +1,38 @@
+Mélanie Paque - Esipe - IMAC 3
+
+
+Sujet :
+Utiliser Docker pour créer un environnement de développement Web qui pourrait remplacer WampServer
+
+
+Afin de réaliser cet environnement de développement, nous avons mis en place
+3 containers
+   - Apache
+   - Php
+   - mySQL
+
+Nous avons remarqué lorsque nous utilisions un service php à l'intérieur d'un container, les autres services ne l'étaient pas.
+Les fonctions, même basique, comme mail() n'était donc pas disponible.
+Nous avons donc utilisé ssmtp pour contourner ce problème.
+
+
+Pour lancer les containers, nous utiliserons : docker-compose
+
+La configuration Apache est modifiable par le biais du fichier : httpd.conf
+Pour ajouter un virtual host, nous pouvons éditerle fichier : httpd-vhosts.conf
+
+
+La configuration mySQL est quand a elle possible avec : conf-mysql.cnf
+
+
+
+
+Pour lancer il projet :
+- il faut avoir docker compose
+(sudo pip install docker-compose)
+
+-puis simplement utiliser la commande: docker-compose up -d
+
+
+
+

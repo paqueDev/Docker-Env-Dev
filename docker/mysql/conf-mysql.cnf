@@ -1,0 +1,5 @@
+#ce fichier est monté automatiquementdans le container mySQL au démarrage
+#il nous permet de modifier la configuration mySQL
+
+#Nous le laissons vide car nous n'avons pas besoin de modifier quoi que ce soit.
+#Par contre, même vide il doit être présent

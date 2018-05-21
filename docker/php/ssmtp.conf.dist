@@ -1,0 +1,8 @@
+mailhub=amel.esipe.gmail.com:587
+AuthUser=amelesipe@domain.net
+AuthPass=psw
+
+FromLineOverride=YES
+hostname=dockerdev.foo.net
+UseSTARTTLS=YES
+
