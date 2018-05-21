@@ -18,10 +18,10 @@ RUN set -ex;
         && rm -rf /tmp/pear
         && echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
         && echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20131226/xdebug.so" > /usr/local/etc/php/conf.d/xdebug.ini; 
-# TODO consider removing the *-dev deps and only keeping the necessary lib* packages
 
-# set recommended PHP.ini settings
-# see https://secure.php.net/manual/en/opcache.installation.php
+
+# Nous définissons les settings du PHP.ini. Nous nous référons à la recommandation :
+# https://secure.php.net/manual/en/opcache.installation.php
 RUN {
 		echo 'opcache.memory_consumption=128';
 		echo 'opcache.interned_strings_buffer=8';

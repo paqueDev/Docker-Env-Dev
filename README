@@ -19,7 +19,7 @@ Nous avons donc utilisé ssmtp pour contourner ce problème.
 Pour lancer les containers, nous utiliserons : docker-compose
 
 La configuration Apache est modifiable par le biais du fichier : httpd.conf
-Pour ajouter un virtual host, nous pouvons éditerle fichier : httpd-vhosts.conf
+Pour ajouter un virtual host, nous pouvons éditer le fichier : httpd-vhosts.conf
 
 
 La configuration mySQL est quand a elle possible avec : conf-mysql.cnf
@@ -27,11 +27,11 @@ La configuration mySQL est quand a elle possible avec : conf-mysql.cnf
 
 
 
-Pour lancer il projet :
-- il faut avoir docker compose
+Pour lancer le projet :
+- docker compose est requis
 (sudo pip install docker-compose)
 
--puis simplement utiliser la commande: docker-compose up -d
+- puis simplement utiliser la commande: docker-compose up -d
 
 
 
