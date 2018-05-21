@@ -11,7 +11,7 @@ Afin de réaliser cet environnement de développement, nous avons mis en place
    - Php
    - mySQL
 
-Nous avons remarqué lorsque nous utilisions un service php à l'intérieur d'un container, les autres services ne l'étaient pas.
+Nous avons remarqué lorsque nous utilisions un service php à l'intérieur d'un container, les autres services n'étaient pas disponibles.
 Les fonctions, même basique, comme mail() n'était donc pas disponible.
 Nous avons donc utilisé ssmtp pour contourner ce problème.
 
