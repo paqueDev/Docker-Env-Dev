@@ -35,4 +35,23 @@ Pour lancer le projet :
 
 
 
+*Pourquoi ai-je ajouté le répertoire tools
+
+Lors de la réalisation de ce travail, j'ai été plusieurs fois dérangé par le fait qu'il y avait plusieurs containers qui tournaient sur ma machine.
+Je ne pouvais pas relancer successivement docker-compose car, le container existant déjà, il n'était pas possible de creer un container avec un nom déjà utilisé.
+Je devais alors exécuter:
+
+docker ps -a
+
+docker stop nom_du_container
+
+rm dockerapache_php_1
+
+
+Il me fallait cependant répéter cela à chaque fois.
+Afin d'éviter cette tâche répétitive, j'ai cherché à mettre en place un système qui pourrait permettre de "cleaner" rapidement mon environnement
+
+Le fichier /tools/cleanenv.sh correspond à ce besoin.
+Il execute un série de commande permettant de supprimer les containers quittés, les images et les volumes inutilisés.
+Une fois exécuté, je dispose d'un environnement vide dans lequel je peux effectuer mes tests dans le cadres de ce travail.
 

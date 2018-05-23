@@ -11,7 +11,7 @@ services:
 # Setup the Apache container
 ###########################
     httpd:
-        container_name: dockerapache_httpd_1
+        container_name: dockerapache_httpd
         restart: always
         image: httpd:2.4.25
         ports:
@@ -27,7 +27,7 @@ services:
 # Setup the PHP container
 ###########################
     php:
-        container_name: dockerapache_php_1
+        container_name: dockerapache_php
         restart: always
         build: ./docker/php/
         expose:
@@ -42,7 +42,7 @@ services:
 # Setup the Database (MySQL) container
 ###########################
     mysql:
-        container_name: dockerapache_mysql_1
+        container_name: dockerapache_mysql
         restart: always
         image: mysql:5.6.36
         ports:
