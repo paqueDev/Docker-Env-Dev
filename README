@@ -11,20 +11,13 @@ Afin de réaliser cet environnement de développement, nous avons mis en place
    - Php
    - mySQL
 
-Nous avons remarqué lorsque nous utilisions un service php à l'intérieur d'un container, les autres services n'étaient pas disponibles.
-Les fonctions, même basique, comme mail() n'était donc pas disponible.
-Nous avons donc utilisé ssmtp pour contourner ce problème.
-
 
 Pour lancer les containers, nous utiliserons : docker-compose
 
-La configuration Apache est modifiable par le biais du fichier : httpd.conf
-Pour ajouter un virtual host, nous pouvons éditer le fichier : httpd-vhosts.conf
-
-
-La configuration mySQL est quand a elle possible avec : conf-mysql.cnf
-
-
+Les configurations :
+- La configuration Apache est modifiable par le biais du fichier : httpd.conf
+- Pour ajouter un virtual host, nous pouvons éditer le fichier : httpd-vhosts.conf
+- La configuration mySQL est quand a elle possible avec : conf-mysql.cnf
 
 
 Pour lancer le projet :
@@ -33,13 +26,22 @@ Pour lancer le projet :
 
 - puis simplement utiliser la commande: docker-compose up -d
 
+Remarques :
+
+1 -------
+Nous avons remarqué que lorsque nous utilisions un service php à l'intérieur d'un container, les autres services n'étaient pas disponibles.
+Les fonctions, même basique, tel que mail() n'était donc pas disponible.
+Nous avons donc utilisé SSMTP pour contourner ce problème.
+
+bash body.txt | mail -s "just a test" myfriend@hisdomain.com
 
 
-*Pourquoi ai-je ajouté le répertoire tools
+2 -------
+Le répertoire ./tools
 
-Lors de la réalisation de ce travail, j'ai été plusieurs fois dérangé par le fait qu'il y avait plusieurs containers qui tournaient sur ma machine.
-Je ne pouvais pas relancer successivement docker-compose car, le container existant déjà, il n'était pas possible de creer un container avec un nom déjà utilisé.
-Je devais alors exécuter:
+Lors de la réalisation de ce travail, nous avons été plusieurs fois dérangé par le fait qu'il y avait plusieurs containers qui tournaient sur ma machine.
+Nous ne pouvions pas relancer successivement docker-compose car, le container existant déjà, il n'était pas possible de creer un container avec un nom déjà utilisé.
+Nous devions alors exécuter:
 
 docker ps -a
 
@@ -48,10 +50,11 @@ docker stop nom_du_container
 rm dockerapache_php_1
 
 
-Il me fallait cependant répéter cela à chaque fois.
-Afin d'éviter cette tâche répétitive, j'ai cherché à mettre en place un système qui pourrait permettre de "cleaner" rapidement mon environnement
+Il nous fallait cependant répéter cela à chaque fois.
+Afin d'éviter cette tâche répétitive, nous avons cherché à mettre en place un système qui pourrait permettre de "cleaner" rapidement mon environnement
 
 Le fichier /tools/cleanenv.sh correspond à ce besoin.
+
 Il execute un série de commande permettant de supprimer les containers quittés, les images et les volumes inutilisés.
-Une fois exécuté, je dispose d'un environnement vide dans lequel je peux effectuer mes tests dans le cadres de ce travail.
+Une fois exécuté, nous disposons d'un environnement vide dans lequel nous pouvons effectuer nos tests dans le cadre de ce travail.
 
