@@ -1,5 +1,12 @@
 #ce fichier est monté automatiquementdans le container mySQL au démarrage
 #il nous permet de modifier la configuration mySQL
 
-#Nous le laissons vide car nous n'avons pas besoin de modifier quoi que ce soit.
+#Nous pouvonsle laisser vide si nous n'avons pas besoin de modifier quoi que ce soit.
 #Par contre, même vide il doit être présent
+
+
+#durant le conctruction du projet, nous ajoutons la ligne ci-dessous afin d'éviter le warning :
+#Warning TIMESTAMP with implicit DEFAULT value is deprecated
+
+[mysqld]
+explicit_defaults_for_timestamp=1
