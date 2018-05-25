@@ -1,34 +1,120 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="fr">
 <head>
-    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
-    <title>Docker Work</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta name="date" content="">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="alternate" type="application/rss+xml" title="" href="">
-    <link rel="alternate" type="application/atom+xml" title="" href="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="modernizr.js"></script>
+    <meta charset="utf-8">
+    <title>System & Cloud Computing</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Tajawal:300,400,500,700,800" rel="stylesheet">
+    <script src="script.js"></script>
+    <style type="text/css">
+        body {
+            width: 100%; margin: 0;
+            padding: 0;
+        }
+        #header, #footer{
+            width: 100%;
+            padding: 20px 0;
+            background: skyblue;
+        }
+        #footer{
+            margin-top: 40px;
+        }
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+        p, h2, h4,h5, li{
+            font-family: 'Tajawal', sans-serif;;
+        }
+        h1{
+            font-family: 'Anton', sans-serif;
+            width: 100%;
+            text-align: center;
+        }
+        h3{
+            font-family: 'Anton', sans-serif;
+            font-size: 24px ;
+        }
+        #main{
+            width: 50%;
+            display: block;
+            margin: auto;
+        }
+        i{
+            font-style: normal !important;
+            font-weight: 300;
+        }
+
+    </style>
 </head>
 <body>
-    <div id="header"></div>
-    <div id="main">
-        <h1>HelLOOOO</h1>
+    <div id="header">
+        <h1>System & Cloud Computing</h1>
+        <h2>Mélanie Paque - Esipe - IMAC 3</h2>
     </div>
-    <div id="footer"></div>
+    <div id="main">
+        <h3>Sujet :</h3>
+        <p><strong>Utiliser Docker pour créer un environnement de développement Web qui pourrait remplacer WampServer</strong></p>
+        <p>Afin de réaliser cet environnement de développement, nous avons mis en place 3 containers</p>
+        <ul>
+            <li>Apache</li>
+            <li>Php</li>
+            <li>mySQL</li>
+        </ul>
 
-<script src="library.js"></script>
-<script src="plugins.js"></script>
-<script src="script.js"></script>
+
+        <p>Pour lancer les containers, nous utiliserons : <strong>docker-compose</strong></p>
+
+        <h4>Les configurations : </h4>
+        <ul>
+            <li>La configuration Apache est modifiable par le biais du fichier : <i>httpd.conf</i></li>
+            <li>Pour ajouter un virtual host, nous pouvons éditer le fichier : <i>httpd-vhosts.conf</i></li>
+            <li>La configuration mySQL est quand a elle possible avec : <i>conf-mysql.cnf</i></li>
+        </ul>
+
+
+        <h4>Pour lancer le projet :</h4>
+        <ul>
+            <li>docker compose est requis (sudo pip install docker-compose)</li>
+            <li>puis simplement utiliser la commande: docker-compose up -d</li>
+            <li>Tester sur <i>http://localhost/index.html</i></li>
+        </ul>
+
+        <h4>Remarques :</h4>
+
+        <h5>1 Service PHP</h5>
+        <p>Nous avons remarqué que lorsque nous utilisions un service php à l'intérieur d'un container, les autres services n'étaient pas disponibles.
+           Les fonctions, même basique, tel que mail() n'était donc pas disponible.<br/>
+        Nous avons donc utilisé SSMTP pour contourner ce problème.</p>
+
+        <p><i>bash body.txt | mail -s "Hi Guys!" myfriends@gmail.com</i> </p>
+
+
+        <h5>2 Le répertoire <i>./tools</i></h5>
+
+        <p>Lors de la réalisation de ce travail, nous avons été plusieurs fois dérangé par le fait qu'il y avait plusieurs containers qui tournaient sur ma machine.
+            Nous ne pouvions pas relancer successivement docker-compose car, le container existant déjà, il n'était pas possible de creer un container avec un nom déjà utilisé.
+        <br/>Nous devions alors exécuter:</p>
+
+        <ul>
+            <li><i>docker ps -a</i></li>
+            <li><i>docker stop nom_du_container</i></li>
+            <li><i>rm nom_du_container</i></li>
+        </ul>
+
+        <p>Il nous fallait cependant répéter cela à chaque fois. Afin d'éviter cette tâche répétitive, nous avons cherché à mettre en place un système qui pourrait permettre de "cleaner" rapidement mon environnement
+            <br/><br/>Le fichier <i>/tools/cleanenv.sh</i> correspond à ce besoin.<br/>
+            <br/>Il execute un série de commande permettant de supprimer les containers quittés, les images et les volumes inutilisés.
+            Une fois exécuté, nous disposons d'un environnement vide dans lequel nous pouvons effectuer nos tests dans le cadre de ce travail.
+        </p>
+
+
+
+    </div>
+    <div id="footer">
+    </div>
+
+
 <script type="text/javascript">
     $(function() {
     });

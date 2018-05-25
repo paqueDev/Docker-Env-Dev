@@ -26,6 +26,8 @@ Pour lancer le projet :
 
 - puis simplement utiliser la commande: docker-compose up -d
 
+- Tester sur http://localhost/index.html
+
 Remarques :
 
 1 -------
@@ -33,8 +35,7 @@ Nous avons remarqué que lorsque nous utilisions un service php à l'intérieur 
 Les fonctions, même basique, tel que mail() n'était donc pas disponible.
 Nous avons donc utilisé SSMTP pour contourner ce problème.
 
-bash body.txt | mail -s "just a test" myfriend@hisdomain.com
-
+bash body.txt | mail -s "Hi Guys!" myfriends@gmail.com
 
 2 -------
 Le répertoire ./tools
