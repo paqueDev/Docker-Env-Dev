@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a54b62f-421c-4118-a96f-be6b17719b60" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,10 +34,15 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="366">
+              <caret line="78" column="81" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ssmtp.conf.dist" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/php/ssmtp.conf.dist">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="conf-mysql.cnf" pinned="false" current-in-tab="false">
@@ -51,6 +54,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="000-default.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/apache/vhosts/000-default.conf">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="httpd.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/apache/httpd.conf">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="ssmtp.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker/php/ssmtp.conf">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,13 +73,9 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cleanenv.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/cleanenv.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-end-line="1" />
-            </state>
-          </provider>
+      <file leaf-file-name="php-mail.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/php/php-mail.conf">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
@@ -268,12 +277,12 @@
       <workItem from="1527077574606" duration="4684000" />
       <workItem from="1527091616668" duration="1435000" />
       <workItem from="1527146949826" duration="6469000" />
-      <workItem from="1527234270622" duration="2904000" />
+      <workItem from="1527234270622" duration="4076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18745000" />
+    <option name="totallyTimeSpent" value="19917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="124" y="23" width="1281" height="797" extended-state="0" />
@@ -511,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/php/ssmtp.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/memo" />
     <entry file="file://$PROJECT_DIR$/body.txt" />
     <entry file="file://$PROJECT_DIR$/tools/testEmail.sh" />
@@ -526,20 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/php/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/mysql/conf-mysql.cnf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -557,10 +545,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/ssmtp.conf.dist">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/ssmtp.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/php-mail.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/mysql/conf-mysql.cnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/apache/vhosts/000-default.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/apache/httpd.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="366">
+          <caret line="78" column="81" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
         </state>
       </provider>
     </entry>
