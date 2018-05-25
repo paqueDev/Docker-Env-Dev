@@ -93,7 +93,7 @@
         <h5>2 Le répertoire <i>./tools</i></h5>
 
         <p>Lors de la réalisation de ce travail, nous avons été plusieurs fois dérangé par le fait qu'il y avait plusieurs containers qui tournaient sur ma machine.
-            Nous ne pouvions pas relancer successivement docker-compose car, le container existant déjà, il n'était pas possible de creer un container avec un nom déjà utilisé.
+            Nous ne pouvions pas relancer successivement <i>docker-compose</i> car, le container existant déjà, il n'était pas possible de créer un container avec un nom déjà utilisé.
         <br/>Nous devions alors exécuter:</p>
 
         <ul>
@@ -102,7 +102,7 @@
             <li><i>rm nom_du_container</i></li>
         </ul>
 
-        <p>Il nous fallait cependant répéter cela à chaque fois. Afin d'éviter cette tâche répétitive, nous avons cherché à mettre en place un système qui pourrait permettre de "cleaner" rapidement mon environnement
+        <p>Il nous fallait cependant répéter cela à chaque fois. Afin d'éviter cette tâche répétitive, nous avons cherché à mettre en place un système qui pourrait permettre de "cleaner" rapidement notre environnement
             <br/><br/>Le fichier <i>/tools/cleanenv.sh</i> correspond à ce besoin.<br/>
             <br/>Il execute un série de commande permettant de supprimer les containers quittés, les images et les volumes inutilisés.
             Une fois exécuté, nous disposons d'un environnement vide dans lequel nous pouvons effectuer nos tests dans le cadre de ce travail.
