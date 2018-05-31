@@ -1,9 +1,9 @@
 FROM php:7.1-fpm
 
-# install the PHP extensions we need
+# installation des extensions php dont nous avons besoin
 RUN set -ex; \
 	\
-	apt-get update; \
+	apt-get update && \
 	apt-get install -y \
 		libjpeg-dev \
 		libpng12-dev \
